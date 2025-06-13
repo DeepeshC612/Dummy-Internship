@@ -3,9 +3,6 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import Signup from '../assets/signup.jpg'; // reuse signup image or use a login one
-import logo from '../assets/Quizzical-Logo.png';
-
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -32,16 +29,16 @@ const LoginForm = () => {
       {/* Navbar */}
       <nav className="w-full px-6 py-4 bg-[#4242ff] shadow-md flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <img src={logo} alt="Logo" className="h-8 w-8" />
+        {/* <img src={logo} alt="Logo" className="h-8 w-8" />*/}  
           <span className="text-xl font-semibold text-gray-800">Quizzical</span>
         </div>
 
-        <a
+      <a
           href="/signup"
           className="text-indigo-100 font-medium hover:underline transition"
         >
           Sign Up
-        </a>
+        </a>  
       </nav>
 
       {/* Main Login Section */}
@@ -96,7 +93,7 @@ const LoginForm = () => {
           </div>
         </div>
 
-        {/* Right: Image */}
+        {/* Right: Image 
         <div className="hidden md:block w-1/2">
           <img
             src={Signup}
@@ -104,6 +101,8 @@ const LoginForm = () => {
             className="w-full h-full object-cover"
           />
         </div>
+        */}
+        
       </div>
     </>
   );
