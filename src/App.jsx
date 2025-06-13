@@ -1,15 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignupForm from './account/SignupForm';
 import LoginForm from './account/LoginForm';
+//import LoginForm from './LoginForm'; // Create this or use a placeholder
 
-function App() {
+const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<LoginForm />} />
+        <Route path="/signup" element={<SignupForm />} />
+        
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
-}
+};
 
 export default App;
